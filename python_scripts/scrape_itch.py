@@ -63,17 +63,14 @@ prognos = normal[6].text
 
 # Jsonize data
 data = {
-  'output':
-  {
-    "location": location,
-    "period": period_datum,
-    "prognos": prognos,
-    "salg_vide": salg_vide_int,
-    "alm": alm_int,
-    "al": al_int,
-    "bjork": bjork_int,
-    "hassel": hassel_int
-  }
+  "location": location,
+  "period": period_datum,
+  "prognos": prognos,
+  "salg_vide": salg_vide_int,
+  "alm": alm_int,
+  "al": al_int,
+  "bjork": bjork_int,
+  "hassel": hassel_int
 }
 
 json_string = json.dumps(data)
