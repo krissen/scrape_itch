@@ -4,18 +4,103 @@
   - name: "Pollen: sälg/vide"
     state_class: measurement
     state: "{{ state_attr('sensor.pollenprognos_scrape', 'salg_vide') | float(0) | round(1) }}"
+    icon: >-
+      {% set lvl = state_attr('sensor.pollenprognos_scrape', 'salg_vide')|float(0) %}
+      {% if lvl == 0 %}
+      mdi:hand-okay
+      {% elif lvl == 1 %}
+      mdi:bee-flower
+      {% elif lvl >= 2 %}
+      mdi:flower-tulip-outline
+      {% elif lvl >= 4 %}
+      mdi:flower
+      {% elif lvl == 6 %}
+      mdi:flower-pollen-outline
+      {% elif lvl == 7 %}
+      mdi:flower-pollen
+      {% else %}
+      mdi:gauge
+      {% endif %}
   - name: "Pollen: alm"
     state_class: measurement
     state: "{{ state_attr('sensor.pollenprognos_scrape', 'alm') | float(0) | round(1) }}"
+    icon: >-
+      {% set lvl = state_attr('sensor.pollenprognos_scrape', 'alm')|float(0) %}
+      {% if lvl == 0 %}
+      mdi:hand-okay
+      {% elif lvl == 1 %}
+      mdi:bee-flower
+      {% elif lvl >= 2 %}
+      mdi:flower-tulip-outline
+      {% elif lvl >= 4 %}
+      mdi:flower
+      {% elif lvl == 6 %}
+      mdi:flower-pollen-outline
+      {% elif lvl == 7 %}
+      mdi:flower-pollen
+      {% else %}
+      mdi:gauge
+      {% endif %}
   - name: "Pollen: al"
     state_class: measurement
     state: "{{ state_attr('sensor.pollenprognos_scrape', 'al') | float(0) | round(1) }}"
+    icon: >-
+      {% set lvl = state_attr('sensor.pollenprognos_scrape', 'al')|float(0) %}
+      {% if lvl == 0 %}
+      mdi:hand-okay
+      {% elif lvl == 1 %}
+      mdi:bee-flower
+      {% elif lvl >= 2 %}
+      mdi:flower-tulip-outline
+      {% elif lvl >= 4 %}
+      mdi:flower
+      {% elif lvl == 6 %}
+      mdi:flower-pollen-outline
+      {% elif lvl == 7 %}
+      mdi:flower-pollen
+      {% else %}
+      mdi:gauge
+      {% endif %}
   - name: "Pollen: björk"
     state_class: measurement
     state: "{{ state_attr('sensor.pollenprognos_scrape', 'bjork') | float(0) | round(1) }}"
+    icon: >-
+      {% set lvl = state_attr('sensor.pollenprognos_scrape', 'bjork')|float(0) %}
+      {% if lvl == 0 %}
+      mdi:hand-okay
+      {% elif lvl == 1 %}
+      mdi:bee-flower
+      {% elif lvl >= 2 %}
+      mdi:flower-tulip-outline
+      {% elif lvl >= 4 %}
+      mdi:flower
+      {% elif lvl == 6 %}
+      mdi:flower-pollen-outline
+      {% elif lvl == 7 %}
+      mdi:flower-pollen
+      {% else %}
+      mdi:gauge
+      {% endif %}
   - name: "Pollen: hassel"
     state_class: measurement
     state: "{{ state_attr('sensor.pollenprognos_scrape', 'hassel') | float(0) | round(1) }}"
+    icon: >-
+      {% set lvl = state_attr('sensor.pollenprognos_scrape', 'hassel')|float(0) %}
+      {% if lvl == 0 %}
+      mdi:hand-okay
+      {% elif lvl == 1 %}
+      mdi:bee-flower
+      {% elif lvl >= 2 %}
+      mdi:flower-tulip-outline
+      {% elif lvl >= 4 %}
+      mdi:flower
+      {% elif lvl == 6 %}
+      mdi:flower-pollen-outline
+      {% elif lvl == 7 %}
+      mdi:flower-pollen
+      {% else %}
+      mdi:gauge
+      {% endif %}
   - name: "Pollen: prognos"
     state: "{{ state_attr('sensor.pollenprognos_scrape', 'prognos') }}"
 
