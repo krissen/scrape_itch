@@ -1,0 +1,22 @@
+---
+
+- sensor:
+  - name: "Pollen: sälg/vide"
+    state_class: measurement
+    state: "{{ states.sensor.pollenprognos_scrape.attributes.output.salg_vide | float(0) | round(1) }}"
+  - name: "Pollen: alm"
+    state_class: measurement
+    state: "{{ states.sensor.pollenprognos_scrape.attributes.output.alm | float(0) | round(1) }}"
+  - name: "Pollen: al"
+    state_class: measurement
+    state: "{{ states.sensor.pollenprognos_scrape.attributes.output.al | float(0) | round(1) }}"
+  - name: "Pollen: björk"
+    state_class: measurement
+    state: "{{ states.sensor.pollenprognos_scrape.attributes.output.bjork | float(0) | round(1) }}"
+  - name: "Pollen: hassel"
+    state_class: measurement
+    state: "{{ states.sensor.pollenprognos_scrape.attributes.output.hassel | float(0) | round(1) }}"
+  - name: "Pollen: prognos"
+    state: "{{ states.sensor.pollenprognos_scrape.attributes.output.prognos }}"
+
+# vim: ts=2 sw=2 et

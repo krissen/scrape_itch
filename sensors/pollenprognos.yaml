@@ -1,0 +1,13 @@
+---
+
+- platform: command_line
+  name: Pollenprognos scrape
+  command: "python /config/python_scripts/scrape_itch.py"
+  value_template: "Pollenprognos scrape"
+  json_attributes:
+    - output
+  scan_interval: 86400 # Once per day
+  command_timeout: 60
+
+
+# vim: ts=2 sw=2 et
